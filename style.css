@@ -1,0 +1,269 @@
+
+
+.header{
+    grid-area: header;
+}
+
+.picture{
+    grid-area: picture;
+}
+
+.info{
+    grid-area: info;
+}
+
+.social-icons{
+    grid-area: social-icons;
+}
+.aboutMe{
+    grid-area: aboutMe;
+}
+
+.cv{
+    grid-area: cv;
+}
+
+.portfolio{
+    grid-area: portfolio;
+}
+
+.contact{
+    grid-area:contact;
+}
+
+.footer{
+    grid-area: footer;
+}
+.site{  
+    align-items: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+        "header" 
+        "picture"
+        "info"
+        "social-icons"
+        "aboutMe"
+        "cv"
+        "portfolio"
+        "contact"
+        "footer";
+    background-color: #050100;
+
+    
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 8vh;
+    background-color:#be9979;
+    
+    
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 10vh;
+   
+    
+}
+
+.nav-links li{
+    list-style: none;
+    opacity: 0;
+}
+
+.nav-links {
+    display: flex;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+    top: 1vh;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    background-color: black;
+    color: #be9979;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.burger div{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.nav-active{
+    transform: translateX(0px);
+}
+.picture{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 5px;
+    padding: 0;
+}
+#picture1{
+    display: flex;
+    border: #be9979 solid 3px;
+    max-width: 300px;
+    max-height: 260px;
+    margin: 0;
+    padding: 0;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+}
+.social-icons{
+    
+
+}
+.fa{
+    color:#be9979;
+    list-style-type: none;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 1%;
+    margin: 5px;
+    border: 1px solid #be9979;
+    cursor: pointer;
+    transition: ease .3s;
+}
+a:hover{
+    color: #b4a399;
+    
+    border: 1px solid #b19b8e;
+        
+
+}
+
+.social:hover > li{
+    opacity: 0.5;
+    
+}
+.social:hover > li:hover {
+    opacity: 1;
+}
+
+.footer{
+    background-color: #ddd3ca;
+    border: #be9979 solid 2px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+
+@media only screen and (min-width: 577px){
+    .site{
+        grid-gap: 15px;
+        grid-template-columns: auto 0.75fr;
+        grid-template-areas: 
+        "header header"
+        "picture social-icons" 
+        "info info"
+        "aboutMe aboutMe"
+        "cv cv"
+        "portfolio portfolio"
+        "contact contact"
+        "footer footer";
+        overflow-x: hidden;
+        justify-content: center;
+        
+        
+    }
+    .header{
+        margin-top: 20px;
+    }
+    .burger{
+        display: none;
+        
+    }
+
+    
+    #picture1{
+        display: flex;
+        border: #be9979 solid 3px;
+        max-width: 500px;
+        max-height: 450px;
+        margin: 0;
+        padding: 0;
+    }
+    .social {
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+    #social-footer{
+        flex-direction: row;
+
+    }
+
+}
+
+.logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+    border:black 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}.toggle.line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle.line1{
+    opacity: 0;
+}
+.toggle.line1{
+    transform: rotate(45deg) translate(-5px, 6px);
+}
+
+
+.info{
+    background-color: #ddd3ca;
+    border: #be9979 solid 2px;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.aboutMe{
+    background-color:#ddd3ca;
+    border: #be9979 solid 2px;
+}
