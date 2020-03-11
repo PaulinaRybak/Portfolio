@@ -15,16 +15,16 @@
 .social-icons{
     grid-area: social-icons;
 }
-.aboutMe{
-    grid-area: aboutMe;
+.about-me{
+    grid-area: about-me;
 }
 
 .cv{
     grid-area: cv;
 }
 
-.portfolio{
-    grid-area: portfolio;
+.work{
+    grid-area: work;
 }
 
 .contact{
@@ -34,7 +34,9 @@
 .footer{
     grid-area: footer;
 }
-.site{  
+.site{
+    display: grid;
+    background-color: #050100;
     align-items: center;
     display: grid;
     grid-gap: 10px;
@@ -44,13 +46,11 @@
         "picture"
         "info"
         "social-icons"
-        "aboutMe"
+        "about-me"
         "cv"
-        "portfolio"
+        "work"
         "contact"
         "footer";
-    background-color: #050100;
-
     
 }
 
@@ -294,19 +294,26 @@
     text-align: center;
     
 }
+.contact{
+    background-color: #ddd3ca;
+    border: #be9979 solid 2px;
+}
 
 
-@media only screen and (min-width: 577px){
+/*media for horizontal phone and tablet*/
+
+@media only screen and (min-width: 568px){
     .site{
+        display: grid;
         grid-gap: 15px;
         grid-template-columns: auto 0.75fr;
         grid-template-areas: 
         "header header"
         "picture social-icons" 
         "info info"
-        "aboutMe aboutMe"
+        "about-me about-me"
         "cv cv"
-        "portfolio portfolio"
+        "work work"
         "contact contact"
         "footer footer";
         overflow-x: hidden;
@@ -360,7 +367,7 @@
 
     
     #picture1{
-        display: flex;
+        /* display: flex; */
         border: #be9979 solid 3px;
         max-width: 500px;
         max-height: 450px;
@@ -386,7 +393,28 @@
 
 }
 
-.aboutMe{
+/* .about-me{
     background-color:#ddd3ca;
     border: #be9979 solid 2px;
+} */
+/*media for wide screens*/
+
+@media only screen and (min-width: 1024px){
+
+    .site{
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: 0.30fr 0.30fr 0.20fr 0.20fr;
+        grid-template-areas: 
+        "header header header header"
+        "picture picture info social-icons" 
+        "about-me about-me about-me about-me"
+        "cv cv cv cv"
+        "work work work work"
+        "contact contact contact contact"
+        "footer footer footer footer";
+        overflow-x: hidden;
+        justify-content: center;
+    }
 }
+
